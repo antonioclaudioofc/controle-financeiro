@@ -1,8 +1,13 @@
-import { Header } from './components/Header';
 import './styles/main.css';
 
-export function App(){
+import { Header } from './components/Header';
+import { Resume } from './components/Resume';
+
+export function App() {
     return (
-       <Header/>
+        <div>
+            <Header />
+            <Resume />
+        </div>
     )
 }
