@@ -12,6 +12,9 @@ module.exports = {
       },
       screens: {
         'md': { 'max': '750px' }
+      },
+      boxShadow: {
+        'custom': '0 0  5px #ccc'
       }
     },
   },
