@@ -1,21 +1,36 @@
 import React, { useState } from "react"
 
-export function Form() {
+interface FormProps {
+    handleAdd: Transition;
+}
 
-    const [desc, setDesc] = useState('');
-    const [amount, setAmount] = useState('');
+export function Form(props: FormProps) {
+    const [desc, setDesc] = useState("");
+    const [amount, setAmount] = useState("");
     const [isExpense, setIsExpense] = useState(false);
 
+    const generateID = () => Math.round(Math.random() * 1000);
 
     const handleSave = () => {
         if (!desc || !amount) {
-            alert('Informe a descrição e o valor!')
-            return
-        } else if (amount < '1') {
-            alert('O valor tem que ser positivo!')
-            return
+            alert("Informe a descrição e o valor!");
+            return;
+        } else if (amount < "1") {
+            alert("O valor tem que ser positivo!");
+            return;
         }
-    }
+
+        const transaction = {
+            id: generateID(),
+            desc: desc,
+            amount: amount,
+            expense: isExpense,
+        };
+
+        handleAdd(props.handleAdd);
+        setDesc("");
+        setAmount("");
+    };
 
     return (
         <div>

@@ -10,6 +10,7 @@ interface Transaction {
     amount: number;
 }
 
+
 export function App() {
     const [transactionsList, setTransactionsList] = useState<Transaction[]>([]);
     const [income, setIncome] = useState<number>(0);
@@ -41,11 +42,19 @@ export function App() {
         setTotal(total);
     }, [transactionsList]);
 
+    const handleAdd = (transaction: Transaction) => {
+        const newArrayTranscation = [...transactionsList, transaction]
+
+        setTransactionsList(newArrayTranscation)
+
+        localStorage.setItem('transactions', JSON.stringify(newArrayTranscation))
+    }
+
     return (
         <div className='bg-[#f2f2f2]'>
             <Header />
             <Resume income={income} expense={expense} total={total} />
-            <Form />
+            <Form handleAdd={handleAdd} />
         </div>
     )
 
