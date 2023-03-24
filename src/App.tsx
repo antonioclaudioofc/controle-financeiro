@@ -5,7 +5,7 @@ import { Resume } from './components/Resume';
 import { Form } from './components/Form';
 import { useState, useEffect } from 'react';
 
-interface Transaction {
+export interface Transaction {
     expense: boolean;
     amount: number;
 }
@@ -54,7 +54,7 @@ export function App() {
         <div className='bg-[#f2f2f2]'>
             <Header />
             <Resume income={income} expense={expense} total={total} />
-            <Form handleAdd={handleAdd} />
+            <Form handleAdd={handleAdd} transactionList={transactionsList} setTransactionsList/>
         </div>
     )
 
