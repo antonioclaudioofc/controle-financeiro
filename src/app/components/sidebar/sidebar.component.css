@@ -1,0 +1,17 @@
+.sidebar {
+  background-color: #ebebeb;
+  width: 13rem;
+}
+
+.sidebar a span {
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+.logout {
+  color: #ff4d6d;
+}
+
+mat-sidenav-content {
+  background-color: #ffffff;
+}
