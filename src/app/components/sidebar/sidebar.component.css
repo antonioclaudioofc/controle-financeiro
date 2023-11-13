@@ -9,9 +9,32 @@
 }
 
 .logout {
+  position: fixed;
+  width: 13rem;
+  bottom: 1rem;
+}
+
+.logout mat-icon {
   color: #ff4d6d;
 }
 
 mat-sidenav-content {
   background-color: #ffffff;
+}
+
+.nav-list {
+  position: relative;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 5rem;
+  }
+  span {
+    display: none;
+  }
+  .logout {
+    width: 5rem;
+  }
 }

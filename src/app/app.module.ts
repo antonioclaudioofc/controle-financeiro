@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
     SidebarComponent,
     FooterComponent,
     HomeComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
