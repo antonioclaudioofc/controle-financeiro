@@ -50,3 +50,18 @@ textarea::placeholder {
   margin-left: 1rem;
   margin-bottom: 0.75rem;
 }
+
+button {
+  outline: none;
+  border: none;
+  background-color: #849fff;
+  color: #ebebeb;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+
+  margin: 1rem;
+}

@@ -9,14 +9,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components/header/header.component';
+import { MatCardModule } from '@angular/material/card';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { DialogComponent } from './components/dialog/dialog.component';
     FooterComponent,
     HomeComponent,
     DialogComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatCardModule,
     MatToolbarModule,
+    FormsModule,
     MatSidenavModule,
     MatListModule,
     MatDialogModule,

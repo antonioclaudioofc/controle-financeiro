@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Task } from 'src/app/model/task.model';
+import { TaskService } from 'src/app/services/task/task.service';
 
 @Component({
   selector: 'app-dialog',
@@ -7,6 +9,18 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog.component.css'],
 })
 export class DialogComponent {
-newTask: any;
-  constructor(public dialogRef: MatDialogRef<DialogComponent>) {}
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    private taskService: TaskService
+  ) {}
+
+  newTask: Task = { name: '', description: '' };
+
+  addTask() {
+    if (this.newTask.name.trim() !== '') {
+      this.taskService.addTask({ ...this.newTask });
+      this.newTask = { name: '', description: '' };
+      this.dialogRef.close();
+    }
+  }
 }
