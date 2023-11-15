@@ -14,12 +14,12 @@ export class DialogComponent {
     private taskService: TaskService
   ) {}
 
-  newTask: Task = { name: '', description: '' };
+  newTask: Task = { name: '', description: '', color: ''};
 
   addTask() {
     if (this.newTask.name.trim() !== '') {
       this.taskService.addTask({ ...this.newTask });
-      this.newTask = { name: '', description: '' };
+      this.newTask = { name: '', description: '', color: ''};
       this.dialogRef.close();
     }
   }

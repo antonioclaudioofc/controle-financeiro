@@ -13,14 +13,23 @@ button {
 }
 
 button:hover {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 section {
-    position: relative;
+  position: relative;
 }
 
 mat-icon {
   padding: 0.625rem;
   color: #ffffff;
+}
+
+app-todo-list {
+  margin: 2.25rem;
+  gap: 0.5rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

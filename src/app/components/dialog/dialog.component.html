@@ -1,6 +1,6 @@
 <form (submit)="addTask()">
   <div>
-    <div class="title">
+    <div class="title" >
       <h2 mat-dialog-title>Tarefa</h2>
       <mat-icon mat-button mat-dialog-close>close</mat-icon>
     </div>
@@ -22,6 +22,10 @@
       rows="5"
       placeholder="Acordar cedo para limpar as roupas"
     ></textarea>
+  </div>
+  <div class="color">
+    <h2>Color</h2>
+    <input type="color" [(ngModel)]="newTask.color" name="taskColor" id="taskColor">
   </div>
   <button type="submit">Adicionar</button>
 </form>

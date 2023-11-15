@@ -1,6 +1,6 @@
 <!-- todo-list.component.html -->
-<div *ngFor="let task of tasks">
-  <mat-card class="example-card">
+<div class="group-card" *ngFor="let task of tasks">
+  <mat-card class="card" [style.backgroundColor]="task.color">
     <mat-card-header>
       <mat-card-title>{{ task.name }}</mat-card-title>
     </mat-card-header>
@@ -8,8 +8,8 @@
       <p>{{ task.description }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button><mat-icon>edit</mat-icon></button>
-      <button mat-button><mat-icon>delete</mat-icon></button>
+      <mat-icon>edit</mat-icon>
+      <mat-icon>delete</mat-icon>
     </mat-card-actions>
   </mat-card>
 </div>
