@@ -45,7 +45,7 @@ textarea::placeholder {
   font-weight: 400;
 }
 
-.description h2 {
+.description h2, .color h2 {
   margin-top: 1rem;
   margin-left: 1rem;
   margin-bottom: 0.75rem;
@@ -64,4 +64,10 @@ button {
   font-weight: 500;
 
   margin: 1rem;
+}
+
+
+input[type="color"] {
+  width: 10rem;
+  height: 3rem;
 }

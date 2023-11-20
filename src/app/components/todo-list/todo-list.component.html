@@ -3,13 +3,13 @@
   <mat-card class="card" [style.backgroundColor]="task.color">
     <mat-card-header>
       <mat-card-title>{{ task.name }}</mat-card-title>
+      <mat-card-actions>
+        <mat-icon class="edit">edit</mat-icon>
+        <mat-icon class="delete">delete</mat-icon>
+      </mat-card-actions>
     </mat-card-header>
     <mat-card-content>
       <p>{{ task.description }}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <mat-icon>edit</mat-icon>
-      <mat-icon>delete</mat-icon>
-    </mat-card-actions>
   </mat-card>
 </div>

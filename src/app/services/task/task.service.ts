@@ -13,4 +13,18 @@ export class TaskService {
     const currentTasks = this.tasksSource.value;
     this.tasksSource.next([...currentTasks, newTask]);
   }
+
+  editTask(updatedTask: Task) {
+    const currentTasks = this.tasksSource.value;
+    const updatedTasks = currentTasks.map((task) =>
+      task.name === updatedTask.name ? { ...updatedTask } : task
+    );
+    this.tasksSource.next(updatedTasks);
+  }
+
+  deleteTask(taskName: string) {
+    const currentTasks = this.tasksSource.value;
+    const updatedTasks = currentTasks.filter((task) => task.name !== taskName);
+    this.tasksSource.next(updatedTasks);
+  }
 }
