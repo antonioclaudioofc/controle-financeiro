@@ -1,26 +1,15 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 import { Task } from 'src/app/model/task.model';
-import { TaskService } from 'src/app/services/task/task.service';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
-export class TodoListComponent implements OnInit, OnDestroy {
-  tasks: Task[] = [];
-  private subscription!: Subscription;
+export class TodoListComponent{
+  constructor(private taskService: TaskService){}
 
-  constructor(private taskService: TaskService) {}
+  tasks: Task[] = this.taskService.getAll()
 
-  ngOnInit() {
-    this.subscription = this.taskService.tasks$.subscribe((tasks) => {
-      this.tasks = tasks;
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 }

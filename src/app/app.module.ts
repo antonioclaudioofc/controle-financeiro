@@ -11,25 +11,25 @@ import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './template/header/header.component';
 import { MatCardModule } from '@angular/material/card';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './template/sidebar/sidebar.component';
+import { FooterComponent } from './template/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import { DialogComponent } from './components/dialog/dialog.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TaskCreateComponent } from './components/task-create/task-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    TodoListComponent,
+    TaskCreateComponent,
     SidebarComponent,
     FooterComponent,
     HomeComponent,
-    DialogComponent,
-    TodoListComponent,
   ],
   imports: [
     BrowserModule,
