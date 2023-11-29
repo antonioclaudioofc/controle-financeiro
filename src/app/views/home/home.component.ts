@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { TaskCreateComponent } from 'src/app/components/task-create/task-create.component';
+import { TaskCreateComponent } from 'src/app/components/task/task-create/task-create.component';
 
 @Component({
   selector: 'app-home',

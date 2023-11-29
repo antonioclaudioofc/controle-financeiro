@@ -1,0 +1,37 @@
+<form (submit)="edit()">
+  <div>
+    <div class="title">
+      <h2 mat-dialog-title>Tarefa</h2>
+      <mat-icon mat-button mat-dialog-close>close</mat-icon>
+    </div>
+    <input
+      type="text"
+      name="taskName"
+      id="taskName"
+      required=""
+      [(ngModel)]="task.name"
+      placeholder="Limpar as roupas"
+    />
+  </div>
+  <div class="description">
+    <h2>Descrição</h2>
+    <textarea
+      name="taskDescription"
+      id="taskDescription"
+      [(ngModel)]="task.description"
+      cols="30"
+      rows="5"
+      placeholder="Acordar cedo para limpar as roupas"
+    ></textarea>
+  </div>
+  <div class="color">
+    <h2>Color</h2>
+    <input
+      type="color"
+      [(ngModel)]="task.color"
+      name="taskColor"
+      id="taskColor"
+    />
+  </div>
+  <button type="submit">Salvar</button>
+</form>

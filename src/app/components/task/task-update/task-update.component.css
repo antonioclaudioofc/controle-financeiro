@@ -1,0 +1,74 @@
+form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    padding: 0;
+  }
+  
+  form div .title {
+    margin-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  input,
+  textarea {
+    outline: none;
+    border: none;
+    background-color: #ebebeb;
+    color: #6f6f6f;
+  
+    border-radius: 0.25rem;
+  
+    width: 20rem;
+    padding: 1rem 0.875rem;
+    margin-inline: 1rem;
+  
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  input::placeholder {
+    color: #6f6f6f;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  textarea::placeholder {
+    font-family: Roboto, "Roboto", sans-serif;
+    color: #6f6f6f;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .description h2,
+  .color h2 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  button {
+    outline: none;
+    border: none;
+    background-color: #849fff;
+    color: #ebebeb;
+  
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+  
+    margin: 1rem;
+  }
+  
+  input[type="color"] {
+    width: 10rem;
+    height: 3rem;
+  }
+  

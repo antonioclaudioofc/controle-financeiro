@@ -4,12 +4,13 @@
     <mat-card-header>
       <mat-card-title>{{ task.name }}</mat-card-title>
       <mat-card-actions>
-        <mat-icon class="edit">edit</mat-icon>
+        <mat-icon class="edit" (click)="openEditTask(task)">edit</mat-icon>
         <mat-icon class="delete">delete</mat-icon>
       </mat-card-actions>
     </mat-card-header>
     <mat-card-content>
       <p>{{ task.description }}</p>
+      <p>{{ task.id }}</p>
     </mat-card-content>
   </mat-card>
 </div>

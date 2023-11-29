@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Task } from 'src/app/model/task.model';
 import { TaskService } from 'src/app/services/task.service';
@@ -8,13 +8,11 @@ import { TaskService } from 'src/app/services/task.service';
   templateUrl: './task-create.component.html',
   styleUrls: ['./task-create.component.css'],
 })
-export class TaskCreateComponent implements OnInit {
+export class TaskCreateComponent {
   constructor(
     private dialogRef: MatDialogRef<TaskCreateComponent>,
     private taskService: TaskService
   ) {}
-
-  ngOnInit(): void {}
 
   newTask: Task = { name: '', description: '', color: '#ffff' };
 

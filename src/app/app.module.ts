@@ -19,24 +19,26 @@ import { HomeComponent } from './views/home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TaskCreateComponent } from './components/task-create/task-create.component';
+import { TaskCreateComponent } from './components/task/task-create/task-create.component';
+import { TaskUpdateComponent } from './components/task/task-update/task-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TodoListComponent,
-    TaskCreateComponent,
     SidebarComponent,
     FooterComponent,
     HomeComponent,
+    TaskCreateComponent,
+    TaskUpdateComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
     MatToolbarModule,
-    FormsModule,
     MatSidenavModule,
     MatListModule,
     MatDialogModule,
